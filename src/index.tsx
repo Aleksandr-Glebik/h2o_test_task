@@ -7,6 +7,7 @@ import {
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage'
 
 import Layout from './components/Layout/Layout'
+import UsersPage from './Pages/UsersPage/UsersPage'
 const styleForEmptyPage ={
   display: 'flex',
   justifyContent: 'center',
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/users",
-        element: <div>users</div>,
+        element: <UsersPage />,
       },
       {
         path: "/money",
