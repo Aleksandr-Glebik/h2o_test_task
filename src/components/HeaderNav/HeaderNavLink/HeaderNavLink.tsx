@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './HeaderNavLink.module.scss'
 import { navLinkType } from '../../../data/dataNavLink'
+import { Link } from 'react-router-dom'
 
 const HeaderNavLink: React.FC<navLinkType> = ({
   title,
@@ -9,8 +10,8 @@ const HeaderNavLink: React.FC<navLinkType> = ({
 }) => {
   return (
     <li className={styles.item}>
-        <a
-          href={href}
+        <Link
+          to={href}
           className={styles.link}
         >
             <img
@@ -18,7 +19,7 @@ const HeaderNavLink: React.FC<navLinkType> = ({
               alt={title}
               className={styles.img}
             />
-        </a>
+        </Link>
     </li>
   )
 }
