@@ -1,25 +1,35 @@
 import React from 'react'
 import styles from './HeaderNavLink.module.scss'
 import { navLinkType } from '../../../data/dataNavLink'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import clsx from 'clsx'
+import { useLocation } from 'react-router-dom'
+
 
 const HeaderNavLink: React.FC<navLinkType> = ({
   title,
   href,
-  srcSvg
+  srcSvg,
 }) => {
+  const { pathname } = useLocation()
+
   return (
     <li className={styles.item}>
-        <Link
+        <NavLink
           to={href}
-          className={styles.link}
+          className={clsx(
+            styles.link,
+            pathname === href
+             ? styles.activeLink
+             : ''
+          )}
         >
             <img
               src={srcSvg}
               alt={title}
               className={styles.img}
             />
-        </Link>
+        </NavLink>
     </li>
   )
 }
