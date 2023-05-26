@@ -1,5 +1,19 @@
 .container {
     position: relative;
+    width: 760px;
+    height: 46px;
+
+    &:after {
+        content: "";
+        width: 100%;
+        display: inline-block;
+        height: 1.5px;
+        background-color: #D2D1D1;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 .list {
@@ -10,15 +24,14 @@
     gap: 40px;
     position: relative;
 
-    &:after {
-        content: "";
-        width: 100%;
-        display: inline-block;
-        height: 1.5px;
-        background-color: #D2D1D1;
-        position: absolute;
-        top: 40px;
-        left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -33,6 +46,7 @@
     transition: all ease-in-out 0.35s;
     cursor: pointer;
     position: relative;
+    white-space: nowrap;
 
     &:focus {
         color: #323F47;
@@ -46,7 +60,7 @@
             position: absolute;
             top: 38px;
             left: 0;
-            z-index: 1;
+            z-index: 10;
         }
     }
     &:hover {
@@ -61,7 +75,7 @@
             position: absolute;
             top: 38px;
             left: 0;
-            z-index: 1;
+            z-index: 10;
         }
     }
     &:active {
@@ -76,7 +90,7 @@
             position: absolute;
             top: 38px;
             left: 0;
-            z-index: 1;
+            z-index: 10;
         }
     }
 }
