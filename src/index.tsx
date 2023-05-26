@@ -11,8 +11,7 @@ import UsersPage from './Pages/UsersPage/UsersPage'
 const styleForEmptyPage ={
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center',
-  height: '100vh'
+  alignItems: 'center'
 }
 
 const router = createBrowserRouter([
@@ -31,12 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/data",
-        element: <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100vh'
-        }}>data</div>,
+        element: <div style={styleForEmptyPage}>data</div>,
       },
       {
         path: "/users",
