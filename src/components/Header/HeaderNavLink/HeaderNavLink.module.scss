@@ -75,3 +75,64 @@
         z-index: 10;
     }
 }
+
+.activeLink:hover {
+    color: #323F47;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 4.5px;
+        background-color: #54D3C2;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        z-index: 10;
+    }
+}
+.activeLink:focus {
+    color: #323F47;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 4.5px;
+        background-color: #54D3C2;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        z-index: 10;
+    }
+}
+.activeLink:active {
+    color: #323F47;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 4.5px;
+        background-color: #54D3C2;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        z-index: 10;
+    }
+}
+.activeLink:focus {
+    color: #323F47;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 4.5px;
+        background-color: #54D3C2;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        z-index: 10;
+    }
+}
