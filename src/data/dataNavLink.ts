@@ -18,43 +18,43 @@ export type dataNavLinkType = navLinkType[]
 export const dataNavLink: dataNavLinkType = [
     {
         id: 1,
-        title: 'calendar',
+        title: 'Календарь сотрудников',
         href: '/calendar',
         srcSvg: SvgCalendar
     },
     {
         id: 2,
-        title: 'note',
+        title: 'База анкет сотрудников',
         href: '/note',
         srcSvg: SvgNote
     },
     {
         id: 3,
-        title: 'data',
+        title: 'База сотрудников',
         href: '/data',
         srcSvg: SvgData
     },
     {
         id: 4,
-        title: 'users',
+        title: 'Общая база сотрудников',
         href: '/users',
         srcSvg: SvgUsers
     },
     {
         id: 5,
-        title: 'money',
+        title: 'Монетизация',
         href: '/money',
         srcSvg: SvgMoney
     },
     {
         id: 6,
-        title: 'statistic',
+        title: 'Статистика',
         href: '/statistic',
         srcSvg: SvgStatistic
     },
     {
         id: 7,
-        title: 'settings',
+        title: 'Настройки',
         href: '/settings',
         srcSvg: SvgSetting
     }

@@ -1,14 +1,20 @@
 import React from 'react'
+import HeaderNavLink from '../HeaderNavLink/HeaderNavLink'
 import styles from './HeaderNav.module.scss'
+import { dataNavLink } from '../../../data/dataNavLink'
 
 const HeaderNav: React.FC = () => {
   return (
     <nav className={styles.container}>
       <ul className={styles.list}>
-        <li className={styles.item}>База анкет сотрудников</li>
-        <li className={styles.item}>Общая база сотрудников</li>
-        <li className={styles.item}>База сотрудников</li>
-        <li className={styles.item}>Календарь сотрудников</li>
+        {
+          dataNavLink.map( link => (
+            <HeaderNavLink
+              key={link.id}
+              {...link}
+            />
+          ))
+        }
       </ul>
     </nav>
   )

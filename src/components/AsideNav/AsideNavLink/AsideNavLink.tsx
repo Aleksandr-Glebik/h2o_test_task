@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import { useLocation, NavLink} from 'react-router-dom'
+import { useLocation, NavLink } from 'react-router-dom'
 import styles from './AsideNavLink.module.scss'
 import { navLinkType } from '../../../data/dataNavLink'
 
