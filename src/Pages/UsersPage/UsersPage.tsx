@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './UsersPage.module.scss'
-// import HeaderUserPage from './HeaderUsersPage/HeaderUserPage'
+import SearchComp from '../../components/SearchComp/SearchComp'
 
 const UsersPage = () => {
+
   return (
     <div className={styles.userPage}>
-        {/* <HeaderUserPage /> */}
-        UsersPage
+      <h2 className={styles.title}>Общая база сотрудников</h2>
+      <SearchComp />
     </div>
   )
 }
