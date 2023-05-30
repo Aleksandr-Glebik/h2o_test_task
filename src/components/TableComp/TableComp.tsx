@@ -5,7 +5,6 @@ import { dataUser, dataUserType } from '../../data/dataUsers'
 import { Table } from 'antd'
 import type { ColumnsType, TablePaginationConfig } from 'antd/es/table'
 import type { FilterValue, SorterResult } from 'antd/es/table/interface'
-
 interface TableParams {
   pagination?: TablePaginationConfig
   sortField?: string
@@ -222,12 +221,6 @@ const columns: ColumnsType<dataUserType> = [
   }
 ]
 
-const getRandomuserParams = (params: TableParams) => ({
-  results: params.pagination?.pageSize,
-  page: params.pagination?.current,
-  ...params,
-})
-
 const TableComp: React.FC = () => {
   const [data, setData] = useState<dataUserType[]>()
   const [tableParams, setTableParams] = useState<TableParams>({
@@ -236,7 +229,6 @@ const TableComp: React.FC = () => {
       pageSize: 10,
     },
   })
-  console.log('data 1', data)
 
   useEffect( () => {
     setData(dataUser)
@@ -249,9 +241,14 @@ const TableComp: React.FC = () => {
   }, [])
 
   useEffect( () => {
-    console.log('dataUser', dataUser)
-
-  }, [tableParams])
+    setData(dataUser)
+    setTableParams({
+      ...tableParams,
+      pagination: {
+        ...tableParams.pagination,
+      },
+    });
+  }, [tableParams.pagination?.pageSize])
 
   const handleTableChange = (
     pagination: TablePaginationConfig,
@@ -272,14 +269,22 @@ const TableComp: React.FC = () => {
   return (
     <div className={styles.tableWrapper}>
        <Table
-        columns={columns}
-        rowKey={(data) => data.id}
-        dataSource={data}
-        pagination={{
-          position: ['bottomCenter'],
-          ...tableParams.pagination
-        }}
-        // loading={loading}
+          columns={columns}
+          rowKey={(data) => data.id}
+          dataSource={data}
+          pagination={{
+            position: ['bottomCenter'],
+            showSizeChanger: true,
+            pageSizeOptions: ['5', '10', '15'],
+            defaultPageSize: 10,
+            defaultCurrent: 1,
+            showTotal:  (total, range) => (
+              <span style={{ left: 40, position: "absolute" }}>
+                {`показано ${range[0]} - ${range[1]} из ${total} результатов`}
+              </span>
+            ),
+            ...tableParams.pagination
+          }}
         onChange={handleTableChange}
         size="small"
         scroll={{
