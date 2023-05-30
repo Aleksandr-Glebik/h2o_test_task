@@ -15,116 +15,210 @@ interface TableParams {
 
 const columns: ColumnsType<dataUserType> = [
   {
+    title: '№',
+    dataIndex: 'id',
+    width: 50
+  },
+  {
     title: 'Имя сотрудника',
     dataIndex: 'fullName',
-    width: '20%',
+    width: 150,
   },
   {
     title: 'ID номер',
     dataIndex: 'id',
-    width: '20%',
+    sorter: (a, b) => a.id - b.id,
+    width: 100,
   },
   {
     title: 'Телефон',
     dataIndex: 'phone',
-    width: '20%',
+    width: 120,
   },
   {
     title: 'Пол',
     dataIndex: 'gender',
     filters: [
-      { text: 'Male', value: 'male' },
-      { text: 'Female', value: 'female' },
+      { text: 'Мужской', value: 'мужской' },
+      { text: 'Женский', value: 'женский' },
     ],
-    width: '20%',
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.gender.indexOf(value.toString()) === 0,
+      width: 80,
   },
   {
     title: 'Дата рождения',
     dataIndex: 'dateOfBirth',
+    width: 130,
   },
   {
     title: 'Метро',
     dataIndex: 'metro',
+    filters: [
+      { text: 'Василеостровская', value: 'Василеостровская' },
+      { text: 'Ладожская', value: 'Ладожская' },
+      { text: 'Московская', value: 'Московская' },
+      { text: 'Купчино', value: 'Купчино' },
+      { text: 'Девяткино', value: 'Девяткино' },
+    ],
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.metro.indexOf(value.toString()) === 0,
+    width: 140,
   },
   {
     title: 'Адрес проживания',
     dataIndex: 'address',
+    width: 200,
   },
   {
     title: 'Банк',
     dataIndex: 'bank',
+    filters: [
+      { text: 'ВТБ', value: 'ВТБ' },
+      { text: 'Сбер', value: 'Сбер' },
+      { text: 'Альфа', value: 'Московская' },
+    ],
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.bank.indexOf(value.toString()) === 0,
+    width: 70,
   },
   {
     title: 'Номер карты',
     dataIndex: 'cardNumber',
+    width: 160,
   },
   {
     title: 'Гражданство',
     dataIndex: 'citizenship',
+    filters: [
+      { text: 'РФ', value: 'РФ' },
+      { text: 'Казахстан', value: 'Казахстан' },
+      { text: 'Азербайджан', value: 'Азербайджан' },
+      { text: 'Узбекистан', value: 'Узбекистан' },
+    ],
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.citizenship.indexOf(value.toString()) === 0,
+    width: 120,
   },
   {
     title: 'Паспорт',
     dataIndex: 'passport',
+    width: 120,
   },
   {
     title: 'Кем выдан',
     dataIndex: 'issued',
+    width: 180,
   },
   {
     title: 'Срок действия',
     dataIndex: 'limitDate',
+    width: 120,
   },
   {
     title: 'Место рождения',
     dataIndex: 'placeOfBirth',
+    width: 170,
   },
   {
     title: 'Адрес прописки',
     dataIndex: 'placeOfResidence',
+    width: 200,
   },
   {
     title: 'Патент',
     dataIndex: 'patent',
+    width: '20%',
   },
   {
     title: 'Срок действия',
     dataIndex: 'patentLimitDate',
+    width: '20%',
   },
   {
     title: 'СНИЛС',
     dataIndex: 'snils',
+    width: '20%',
   },
   {
     title: 'ИНН',
     dataIndex: 'inn',
+    width: '20%',
   },
   {
     title: 'Мед. книжка',
     dataIndex: 'medBook',
+    width: '20%',
   },
   {
     title: 'Должность',
     dataIndex: 'job',
+    filters: [
+      { text: 'Бригадир', value: 'Бригадир' },
+      { text: 'Клинер', value: 'Клинер' },
+      { text: 'Слесарь', value: 'Азербайджан' },
+    ],
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.job.indexOf(value.toString()) === 0,
+    width: '20%',
   },
   {
     title: 'Подразделение',
     dataIndex: 'subdivision',
+    filters: [
+      { text: 'B2С', value: 'B2С' },
+      { text: 'B2B', value: 'B2B' },
+    ],
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.subdivision.indexOf(value.toString()) === 0,
+    width: '20%',
   },
   {
     title: 'Решение',
     dataIndex: 'decision',
+    filters: [
+      { text: 'Принят', value: 'Принят' },
+      { text: 'Не принят', value: 'Не принят' },
+    ],
+    onFilter: (value:
+      string |
+      number |
+      boolean,
+      record) => record.decision.indexOf(value.toString()) === 0,
+    width: '20%',
   },
   {
     title: 'Источник',
     dataIndex: 'source',
+    width: '20%',
   },
   {
     title: 'Дата',
     dataIndex: 'dateDecision',
+    width: '20%',
   },
   {
     title: 'Примечание',
     dataIndex: 'note',
+    width: '20%',
   }
 ]
 
@@ -181,9 +275,18 @@ const TableComp: React.FC = () => {
         columns={columns}
         rowKey={(data) => data.id}
         dataSource={data}
-        pagination={tableParams.pagination}
+        pagination={{
+          position: ['bottomCenter'],
+          ...tableParams.pagination
+        }}
         // loading={loading}
         onChange={handleTableChange}
+        size="small"
+        scroll={{
+          x: 3520,
+          y: 400
+        }}
+        bordered={true}
       />
     </div>
   )
