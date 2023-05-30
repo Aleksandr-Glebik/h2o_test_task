@@ -14,31 +14,31 @@ interface TableParams {
 
 const columns: ColumnsType<dataUserType> = [
   {
-    title: '№',
+    title: <div className={styles.titleHeaderTable}>№</div>,
     dataIndex: 'id',
-    width: 50
+    width: 50,
   },
   {
-    title: 'Имя сотрудника',
+    title: <div className={styles.titleHeaderTable}>Имя сотрудника</div>,
     dataIndex: 'fullName',
     width: 150,
   },
   {
-    title: 'Основная информация',
+    title: <div className={styles.titleHeaderTable}>Основная информация</div>,
     children: [
       {
-        title: 'ID номер',
+        title: <div className={styles.titleHeaderTable}>ID номер</div>,
         dataIndex: 'id',
         sorter: (a, b) => a.id - b.id,
         width: 100,
       },
       {
-        title: 'Телефон',
+        title: <div className={styles.titleHeaderTable}>Телефон</div>,
         dataIndex: 'phone',
         width: 120,
       },
       {
-        title: 'Пол',
+        title: <div className={styles.titleHeaderTable}>Пол</div>,
         dataIndex: 'gender',
         filters: [
           { text: 'Мужской', value: 'мужской' },
@@ -52,12 +52,12 @@ const columns: ColumnsType<dataUserType> = [
           width: 80,
       },
       {
-        title: 'Дата рождения',
+        title: <div className={styles.titleHeaderTable}>Дата рождения</div>,
         dataIndex: 'dateOfBirth',
         width: 130,
       },
       {
-        title: 'Метро',
+        title: <div className={styles.titleHeaderTable}>Метро</div>,
         dataIndex: 'metro',
         filters: [
           { text: 'Василеостровская', value: 'Василеостровская' },
@@ -74,17 +74,17 @@ const columns: ColumnsType<dataUserType> = [
         width: 140,
       },
       {
-        title: 'Адрес проживания',
+        title: <div className={styles.titleHeaderTable}>Адрес проживани</div>,
         dataIndex: 'address',
         width: 200,
       },
     ]
   },
   {
-    title: 'Банковская информация',
+    title: <div className={styles.titleHeaderTable}>Банковская информация</div>,
     children: [
       {
-        title: 'Банк',
+        title: <div className={styles.titleHeaderTable}>Банк</div>,
         dataIndex: 'bank',
         filters: [
           { text: 'ВТБ', value: 'ВТБ' },
@@ -99,17 +99,17 @@ const columns: ColumnsType<dataUserType> = [
         width: 70,
       },
       {
-        title: 'Номер карты',
+        title: <div className={styles.titleHeaderTable}>Номер карты</div>,
         dataIndex: 'cardNumber',
         width: 160,
       },
     ]
   },
   {
-    title: 'Документы сотрудника',
+    title: <div className={styles.titleHeaderTable}>Документы сотрудника</div>,
     children: [
       {
-        title: 'Гражданство',
+        title: <div className={styles.titleHeaderTable}>Гражданство</div>,
         dataIndex: 'citizenship',
         filters: [
           { text: 'РФ', value: 'РФ' },
@@ -125,62 +125,62 @@ const columns: ColumnsType<dataUserType> = [
         width: 120,
       },
       {
-        title: 'Паспорт',
+        title: <div className={styles.titleHeaderTable}>Паспорт</div>,
         dataIndex: 'passport',
         width: 120,
       },
       {
-        title: 'Кем выдан',
+        title: <div className={styles.titleHeaderTable}>Кем выдан</div>,
         dataIndex: 'issued',
         width: 180,
       },
       {
-        title: 'Срок действия',
+        title: <div className={styles.titleHeaderTable}>Срок действия</div>,
         dataIndex: 'limitDate',
         width: 120,
       },
       {
-        title: 'Место рождения',
+        title: <div className={styles.titleHeaderTable}>Место рождения</div>,
         dataIndex: 'placeOfBirth',
         width: 170,
       },
       {
-        title: 'Адрес прописки',
+        title: <div className={styles.titleHeaderTable}>Адрес прописки</div>,
         dataIndex: 'placeOfResidence',
         width: 200,
       },
       {
-        title: 'Патент',
+        title: <div className={styles.titleHeaderTable}>Патент</div>,
         dataIndex: 'patent',
         width: '20%',
       },
       {
-        title: 'Срок действия',
+        title: <div className={styles.titleHeaderTable}>Срок действия</div>,
         dataIndex: 'patentLimitDate',
         width: '20%',
       },
       {
-        title: 'СНИЛС',
+        title: <div className={styles.titleHeaderTable}>СНИЛС</div>,
         dataIndex: 'snils',
         width: '20%',
       },
       {
-        title: 'ИНН',
+        title: <div className={styles.titleHeaderTable}>ИНН</div>,
         dataIndex: 'inn',
         width: '20%',
       },
       {
-        title: 'Мед. книжка',
+        title: <div className={styles.titleHeaderTable}>Мед. книжка</div>,
         dataIndex: 'medBook',
         width: '20%',
       }
     ]
   },
   {
-    title: 'Информация от HR',
+    title: <div className={styles.titleHeaderTable}>Информация от HR</div>,
     children: [
       {
-        title: 'Должность',
+        title: <div className={styles.titleHeaderTable}>Должность</div>,
         dataIndex: 'job',
         filters: [
           { text: 'Бригадир', value: 'Бригадир' },
@@ -195,7 +195,7 @@ const columns: ColumnsType<dataUserType> = [
         width: '20%',
       },
       {
-        title: 'Подразделение',
+        title: <div className={styles.titleHeaderTable}>Подразделение</div>,
         dataIndex: 'subdivision',
         filters: [
           { text: 'B2С', value: 'B2С' },
@@ -209,7 +209,7 @@ const columns: ColumnsType<dataUserType> = [
         width: '20%',
       },
       {
-        title: 'Решение',
+        title: <div className={styles.titleHeaderTable}>Решение</div>,
         dataIndex: 'decision',
         filters: [
           { text: 'Принят', value: 'Принят' },
@@ -223,17 +223,17 @@ const columns: ColumnsType<dataUserType> = [
         width: '20%',
       },
       {
-        title: 'Источник',
+        title: <div className={styles.titleHeaderTable}>Источник</div>,
         dataIndex: 'source',
         width: '20%',
       },
       {
-        title: 'Дата',
+        title: <div className={styles.titleHeaderTable}>Дата</div>,
         dataIndex: 'dateDecision',
         width: '20%',
       },
       {
-        title: 'Примечание',
+        title: <div className={styles.titleHeaderTable}>Примечание</div>,
         dataIndex: 'note',
         width: '20%',
       }
@@ -312,6 +312,7 @@ const TableComp: React.FC = () => {
           y: 400
         }}
         bordered={true}
+        rowClassName={(record, index) => index % 2 === 0 ? styles['table-row-light'] :  styles['table-row-green']}
       />
     </div>
   )

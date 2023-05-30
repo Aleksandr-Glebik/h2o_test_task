@@ -5,3 +5,40 @@
     margin-top: 80px;
     overflow-x: auto;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  left: -30px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F8F8F8;
+  position: relative;
+  left: -30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B6BCC3;
+  border-radius: 8px;
+  position: relative;
+  left: -30px;
+}
+
+.table-row-light {
+    background: rgba(248, 248, 248, 0.5);
+}
+.table-row-green {
+    background: rgba(229, 248, 246, 0.5);
+}
+
+.titleHeaderTable {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 120%;
+    color: #54D3C2;
+    padding: 10px;
+}
