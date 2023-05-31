@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/h2o_test_task/static/css/main.b75cf822.css",
+    "main.css": "/h2o_test_task/static/css/main.c110776f.css",
     "main.js": "/h2o_test_task/static/js/main.0a7308fa.js",
     "static/media/logo.svg": "/h2o_test_task/static/media/logo.54e03c9fa4df26692df107d7ce7c53f1.svg",
     "static/media/settings.svg": "/h2o_test_task/static/media/settings.f6e5a6ac5d5d9c99987f769a61b93e1c.svg",
@@ -13,11 +13,11 @@
     "static/media/data.svg": "/h2o_test_task/static/media/data.c20dbc57eb1b88069c23868d6be20102.svg",
     "static/media/search.svg": "/h2o_test_task/static/media/search.097e0b585cf9465fec2b76f0fd38d793.svg",
     "static/media/btnUserPageNav.svg": "/h2o_test_task/static/media/btnUserPageNav.2ea9d6496339a0779757daf1b6bf45b9.svg",
-    "main.b75cf822.css.map": "/h2o_test_task/static/css/main.b75cf822.css.map",
+    "main.c110776f.css.map": "/h2o_test_task/static/css/main.c110776f.css.map",
     "main.0a7308fa.js.map": "/h2o_test_task/static/js/main.0a7308fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.b75cf822.css",
+    "static/css/main.c110776f.css",
     "static/js/main.0a7308fa.js"
   ]
 }
