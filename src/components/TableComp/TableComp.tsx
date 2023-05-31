@@ -5,11 +5,16 @@ import { dataUser, dataUserType } from '../../data/dataUsers'
 import { Table } from 'antd'
 import type { ColumnsType, TablePaginationConfig } from 'antd/es/table'
 import type { FilterValue, SorterResult } from 'antd/es/table/interface'
+
 interface TableParams {
   pagination?: TablePaginationConfig
   sortField?: string
   sortOrder?: string
   filters?: Record<string, FilterValue | null>
+}
+
+interface TableCompType {
+  searchValue: string
 }
 
 const columns: ColumnsType<dataUserType> = [
@@ -241,7 +246,7 @@ const columns: ColumnsType<dataUserType> = [
   }
 ]
 
-const TableComp: React.FC = () => {
+const TableComp: React.FC<TableCompType> = ({ searchValue }) => {
   const [data, setData] = useState<dataUserType[]>()
   const [tableParams, setTableParams] = useState<TableParams>({
     pagination: {
@@ -250,25 +255,33 @@ const TableComp: React.FC = () => {
     },
   })
 
-  useEffect( () => {
+  const setValues = () => {
     setData(dataUser)
     setTableParams({
       ...tableParams,
       pagination: {
         ...tableParams.pagination,
       },
-    });
+    })
+  }
+
+  useEffect( () => {
+    setValues()
   }, [])
 
   useEffect( () => {
-    setData(dataUser)
-    setTableParams({
-      ...tableParams,
-      pagination: {
-        ...tableParams.pagination,
-      },
-    });
+    setValues()
   }, [tableParams.pagination?.pageSize])
+
+  useEffect( () => {
+    if (searchValue.trim().length) {
+      const searchStr = searchValue.toLowerCase().trim()
+      const newData = data?.filter( item => item.fullName.toLowerCase().includes(searchStr) === true)
+      setData(newData)
+    } else {
+      setValues()
+    }
+  }, [searchValue])
 
   const handleTableChange = (
     pagination: TablePaginationConfig,

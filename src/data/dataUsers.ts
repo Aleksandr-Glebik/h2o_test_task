@@ -60,7 +60,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Полякова Наталья',
         id: 2,
         phone: '89764554323',
         gender: 'женский',
@@ -88,7 +88,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Морозов Павел',
+        fullName: 'Иванов Иван',
         id: 3,
         phone: '89764554323',
         gender: 'мужской',
@@ -116,7 +116,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Петров Петр',
         id: 4,
         phone: '89764554323',
         gender: 'женский',
@@ -144,7 +144,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Морозов Павел',
+        fullName: 'Глебик Александр',
         id: 5,
         phone: '89764554323',
         gender: 'мужской',
@@ -172,7 +172,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Земляков Иван',
         id: 6,
         phone: '89764554323',
         gender: 'женский',
@@ -200,7 +200,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Морозов Павел',
+        fullName: 'Сергеев Петр',
         id: 7,
         phone: '89764554323',
         gender: 'мужской',
@@ -228,7 +228,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Абрамович Степан',
         id: 8,
         phone: '89764554323',
         gender: 'женский',
@@ -256,7 +256,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Морозов Павел',
+        fullName: 'Сунелик Максим',
         id: 9,
         phone: '89764554323',
         gender: 'мужской',
@@ -284,7 +284,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Черненко Виталий',
         id: 10,
         phone: '89764554323',
         gender: 'женский',
@@ -312,7 +312,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Храбрый Георгий',
         id: 11,
         phone: '89764554323',
         gender: 'женский',
@@ -340,7 +340,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Морозов Павел',
+        fullName: 'Прямой Иван',
         id: 12,
         phone: '89764554323',
         gender: 'мужской',
@@ -368,7 +368,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Петрова Анна',
         id: 13,
         phone: '89764554323',
         gender: 'женский',
@@ -396,7 +396,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Морозов Павел',
+        fullName: 'Коробач Василий',
         id: 14,
         phone: '89764554323',
         gender: 'мужской',
@@ -424,7 +424,7 @@ export const dataUser: dataUsersType = [
         note: 'карта на Максима Вилина'
     },
     {
-        fullName: 'Полякова наталья',
+        fullName: 'Марковский Георгий',
         id: 15,
         phone: '89764554323',
         gender: 'женский',
